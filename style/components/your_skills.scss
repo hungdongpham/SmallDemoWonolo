@@ -1,0 +1,41 @@
+.your-skills{
+    background-color: #f8c12c;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    .skills-list{
+        .skill-item{
+            img{
+                display: inline;
+                border-radius: 50%;
+                background-color: #f8c12c;
+                width: 50px;
+                height: 50px;
+            }
+            h4{
+                display: inline;
+                padding-left: 10px;
+            }
+            .checkbox{
+                display: inline;
+                float: right;
+            }
+        }
+    }
+    .google-map{
+        width: 100%;
+        height: 400px;
+    }
+    .btn{
+        background-color: white;
+        &:hover {
+            color: #adadad;
+        }
+    }
+    .note{
+        color: white;
+        font-size: 12px;
+    }
+    .angled_down_outside {
+        min-height: 100px;
+    }
+}

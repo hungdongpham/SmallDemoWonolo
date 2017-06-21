@@ -1,0 +1,89 @@
+.banner-choices{
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    background-image: url(http://demos-pirftc7xlgm3gz2xr9zm.stackpathdns.com/realfactory/wp-content/uploads/2016/09/slider-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+}
+
+.btn{
+    font-size: 15px;
+    color: black;//#f8c12c;
+    padding: 15px 28px 15px 28px;
+    margin: 0px 10px 10px 0px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-width: 2px 2px 2px 2px;
+    border-color: black;//#f8c12c;
+    background: none;
+    text-shadow: none;
+}
+
+.triangle{
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    margin: 0 auto;
+    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #181A1C;
+    border-left: 200px outset transparent;
+    border-right: 200px outset transparent;
+    position: relative;
+    top: 30px;
+    opacity: 0.95;
+}
+
+.choice-area {
+    background-size: cover;
+    background-position: center center;
+    height: 408px;
+    display: table;
+    table-layout: fixed;
+    margin:10px;
+    
+    &-wonoloer{
+        color: black;
+        background-image: url(http://demos-pirftc7xlgm3gz2xr9zm.stackpathdns.com/realfactory/wp-content/uploads/2016/06/service-1.jpg);    
+    }
+    &-requester{
+        color: #f8c12c;
+        h3{
+             color: #f8c12c;
+        }
+        background-image: url(http://demos-pirftc7xlgm3gz2xr9zm.stackpathdns.com/realfactory/wp-content/uploads/2016/06/service-2.jpg);
+        p, .btn {
+            color: #f8c12c;
+            border-color: #f8c12c;
+        }       
+    }
+    .caption{
+        h3{
+            b, strong{
+                color: white;
+                font-size: 35px;
+            }
+        }   
+        padding: 9px;
+        color: #333;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+  .choice-area {
+    margin: auto;
+    margin-bottom:10px;
+  }
+}

@@ -1,0 +1,20 @@
+ .custom-navbar{
+    background-image: -webkit-linear-gradient(top,#373737 0,black 100%);
+    background-image: -o-linear-gradient(top,#373737 0,black 100%);
+    background-image: linear-gradient(to bottom,#373737 0,black 100%);
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    background-color: black; 
+    border-color: black;
+    .navbar-brand {
+        color: #ffdc00;
+    }
+    img{
+        height: 120%;
+    }
+    .navbar-nav>li>a{
+        text-shadow: none;
+    }
+}
+

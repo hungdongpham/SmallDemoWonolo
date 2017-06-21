@@ -1,0 +1,363 @@
+/*Main style*/
+
+.list-quotes {
+    cursor: pointer;
+    height: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid blue;
+    img{
+        width: 100%;
+    }
+}
+
+.list-quotes img,
+.list-quotes h1 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+.list-quotes img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.list-quotes h1 {
+    background: rgba(20, 31, 44, 0.8);
+    bottom: 30px;
+    float: right;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px;
+    position: absolute;
+    margin: 0;
+}
+
+.list-quotes p {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+    font-size: 15px;
+    font-weight: normal;
+    background: rgba(2, 1, 1, 0.78);
+    width: 100%;
+    color: #fff;
+}
+
+.list-quotes:hover img {
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: scale(1.2);
+    transition: all 250ms ease;
+}
+
+.list-quotes:hover {
+    box-shadow: 0 0 5px 2px rgba(51, 153, 153, 0.5);
+}
+
+.list-quotes:hover h1 {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    text-shadow: 0px 0 15px #fff;
+    transition: all 250ms ease;
+}
+
+.list-quotes:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.quotes span {
+    color: #222;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.job-area-wrapper {
+    padding-top: 100px;
+}
+
+
+/*---------------------------------
+    Section Angles (Up and Down Directions)
+-----------------------------------*/
+
+
+/*-------------- angles up outside section ---------------*/
+
+.angled_up_outside {
+    overflow: hidden;
+    min-height: 200px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+.angled_up_outside .slope.upleft {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    min-height: 100px;
+    position: absolute;
+    top: -85px;
+    left: 0px;
+    width: 150%;
+    margin-left: -50%;
+}
+
+.angled_up_outside .slope.upright {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+    min-height: 100px;
+    top: -49px;
+    position: absolute;
+    right: 0px;
+    width: 150%;
+    margin-right: -50%;
+}
+
+.angled_up_outside.primary {
+    background-color: #f8c12c;
+}
+
+.angled_up_outside.white .slope.upright,
+.angled_up_outside.white .slope.upleft {
+    background-color: #ffffff;
+}
+
+
+/*-------------- angles down outside section ---------------*/
+
+.angled_down_outside {
+    overflow: hidden;
+    min-height: 200px;
+    margin-top: -75px;
+    position: relative;
+    background-color: #f8c12c;
+    z-index: 10;
+    width: 100%;
+}
+
+.angled_down_outside .slope.downleft {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+    min-height: 100px;
+    position: absolute;
+    bottom: -49px;
+    left: 0px;
+    width: 150%;
+    margin-left: -50%;
+}
+
+.angled_down_outside .slope.downright {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    min-height: 100px;
+    bottom: -85px;
+    position: absolute;
+    right: 0px;
+    width: 150%;
+    margin-right: -50%;
+}
+
+.angled_down_outside.primary,
+.angled_down_outside.primary.lightgray {
+    background-color: #f8c12c;
+}
+
+.angled_down_outside.lightgray,
+.angled_down_outside.lightgray.white {
+    background-color: #f5f5f5;
+}
+
+.angled_down_outside.lightgray {
+    background-color: #f5f5f5;
+}
+
+.angled_down_outside.white .slope.downright,
+.angled_down_outside.white .slope.downleft {
+    background-color: #ffffff;
+}
+
+.angled_down_outside.lightgray.white .slope.downright,
+.angled_down_outside.lightgray.white .slope.downleft {
+    background-color: #ffffff;
+}
+
+.angled_down_outside.lightgray .slope.downright,
+.angled_down_outside.lightgray .slope.downleft {
+    background-color: white;
+}
+
+.angled_down_outside.black .slope.downright,
+.angled_down_outside.black .slope.downleft {
+    background-color: #212121;
+}
+
+
+/*-------------- angles up inside section ---------------*/
+
+.angled_up_inside {
+    height: 200px;
+    margin-top: -110px;
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 10;
+}
+
+.angled_up_inside .slope.upleft {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    min-height: 100px;
+    position: absolute;
+    top: 126px;
+    left: 0px;
+    width: 150%;
+    margin-left: -50%;
+}
+
+.angled_up_inside .slope.upright {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+    min-height: 100px;
+    position: absolute;
+    top: 162px;
+    right: 0px;
+    width: 150%;
+    margin-right: -50%;
+}
+
+.angled_up_inside.primary,
+.angled_up_inside.primary .slope.upright,
+.angled_up_inside.primary .slope.upleft {
+    background-color: #ffc107;
+}
+
+.angled_up_inside.white,
+.angled_up_inside.white .slope.upright,
+.angled_up_inside.white .slope.upleft {
+    background-color: #ffffff;
+}
+
+.angled_up_inside.black,
+.angled_up_inside.black .slope.upright,
+.angled_up_inside.black .slope.upleft {
+    background-color: #212121;
+}
+
+.angled_up_inside.lightgray,
+.angled_up_inside.lightgray .slope.upright,
+.angled_up_inside.lightgray .slope.upleft {
+    background-color: #f5f5f5;
+}
+
+
+/*-------------- angles down inside section ---------------*/
+
+.angled_down_inside {
+    height: 0px;
+    margin-top: 0px;
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 10;
+}
+
+.angled_down_inside .slope.upleft {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+    min-height: 100px;
+    position: absolute;
+    top: -70px;
+    left: 0px;
+    width: 150%;
+    margin-left: -50%;
+}
+
+.angled_down_inside .slope.upright {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    min-height: 100px;
+    position: absolute;
+    top: -34px;
+    right: 0px;
+    width: 150%;
+    margin-right: -50%;
+}
+
+.angled_down_inside.primary,
+.angled_down_inside.primary .slope.upright,
+.angled_down_inside.primary .slope.upleft {
+    background-color: #ffc107;
+}
+
+.angled_down_inside.white,
+.angled_down_inside.white .slope.upright,
+.angled_down_inside.white .slope.upleft {
+    background-color: #ffffff;
+}
+
+.angled_down_inside.lightgray,
+.angled_down_inside.lightgray .slope.upright,
+.angled_down_inside.lightgray .slope.upleft {
+    background-color: #f5f5f5;
+}
+
+.angled_down_inside.black,
+.angled_down_inside.black .slope.upright,
+.angled_down_inside.black .slope.upleft {
+    background-color: #212121;
+}
+
+@media only screen and (min-width: 1450px) {
+    .angled_down_inside .slope.upleft {
+        min-height: 115px;
+    }
+    .angled_up_inside .slope.upright {
+        top: 158px;
+    }
+}
+
+.jobarea {
+    background-color: #f8c12c;
+    .jobarea-header {
+        position: relative;
+        top: 10px;
+        h2 {
+            font-size: 35px;
+            font-weight: 300;
+            letter-spacing: 0px;
+            text-transform: none;
+            color: #f8c12c;
+        }
+    }
+    .angled_down_outside {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+    .jobarea {
+        .jobarea-header {
+            top: 80px;
+        }
+    }
+}
