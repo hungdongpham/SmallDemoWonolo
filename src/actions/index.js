@@ -35,7 +35,7 @@ const WEATHER_ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=
 
 const SERVER_ROOT_URL = 'http://localhost:3090';
 
-const WONOLO_TOKEN = 'y7NcGfAfHSHbsq_tizLY';
+const WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
 
 export function fetchPosts(){
     const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
