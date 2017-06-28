@@ -33,7 +33,7 @@ const API_KEY = '?key=abdef';
 const WEATHER_API_KEY = 'c2f8bf1f271b8ff9423f89b3a9c35bbf';
 const WEATHER_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}`;
 
-const SERVER_ROOT_URL = 'https://localhost:3090';
+const SERVER_ROOT_URL = 'https://tranquil-peak-63988.herokuapp.com';
 
 const WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
 
