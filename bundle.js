@@ -28427,7 +28427,7 @@
 	var WEATHER_API_KEY = 'c2f8bf1f271b8ff9423f89b3a9c35bbf';
 	var WEATHER_ROOT_URL = 'https://api.openweathermap.org/data/2.5/forecast?appid=' + WEATHER_API_KEY;
 
-	var SERVER_ROOT_URL = 'http://localhost:3090';
+	var SERVER_ROOT_URL = 'https://tranquil-peak-63988.herokuapp.com';
 
 	var WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
 
