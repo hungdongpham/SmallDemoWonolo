@@ -35,7 +35,7 @@ const WEATHER_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid
 
 const SERVER_ROOT_URL = 'https://tranquil-peak-63988.herokuapp.com';
 
-const WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
+let WONOLO_TOKEN = sessionStorage.getItem('wonolo_token') ? sessionStorage.getItem('wonolo_token'): 'NULL';
 
 export function fetchPosts(){
     const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
@@ -150,7 +150,6 @@ export function signinUser({ email, password }){
 
 export function signupUser({email, password }){
     return function (dispatch){
-        console.log('abcd');
         axios.post(`${SERVER_ROOT_URL}/signup`, {email, password})
             .then(response => {
                 dispatch({ type: AUTH_USER });
@@ -162,6 +161,19 @@ export function signupUser({email, password }){
                 dispatch(authError(message.response.data.error))
             });
     }
+
+}
+
+export function getWonoloToken(){
+    return axios.post('http://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_')
+            .then(response => {
+                sessionStorage.setItem('wonolo_token', response.data.token);
+            })
+            .catch(message => {
+                debugger;
+                authError(message.response.data.error);
+            });
+    
 
 }
 

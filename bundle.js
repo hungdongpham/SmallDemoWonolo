@@ -28389,6 +28389,7 @@
 	exports.fetchUsers = fetchUsers;
 	exports.signinUser = signinUser;
 	exports.signupUser = signupUser;
+	exports.getWonoloToken = getWonoloToken;
 	exports.authError = authError;
 	exports.signoutUser = signoutUser;
 	exports.fetchMessage = fetchMessage;
@@ -28429,7 +28430,7 @@
 
 	var SERVER_ROOT_URL = 'https://tranquil-peak-63988.herokuapp.com';
 
-	var WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
+	var WONOLO_TOKEN = sessionStorage.getItem('wonolo_token') ? sessionStorage.getItem('wonolo_token') : 'NULL';
 
 	function fetchPosts() {
 	    var request = _axios2.default.get(ROOT_URL + '/posts' + API_KEY);
@@ -28547,7 +28548,6 @@
 	        password = _ref2.password;
 
 	    return function (dispatch) {
-	        console.log('abcd');
 	        _axios2.default.post(SERVER_ROOT_URL + '/signup', { email: email, password: password }).then(function (response) {
 	            dispatch({ type: _types.AUTH_USER });
 	            localStorage.setItem('token', response.data.token);
@@ -28557,6 +28557,15 @@
 	            dispatch(authError(message.response.data.error));
 	        });
 	    };
+	}
+
+	function getWonoloToken() {
+	    return _axios2.default.post('http://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_').then(function (response) {
+	        sessionStorage.setItem('wonolo_token', response.data.token);
+	    }).catch(function (message) {
+	        debugger;
+	        authError(message.response.data.error);
+	    });
 	}
 
 	function authError(error) {
@@ -54322,6 +54331,8 @@
 
 	var _customer_review2 = _interopRequireDefault(_customer_review);
 
+	var _index = __webpack_require__(271);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -54340,6 +54351,11 @@
 	  }
 
 	  _createClass(Main, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      (0, _index.getWonoloToken)();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
