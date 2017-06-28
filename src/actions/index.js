@@ -27,13 +27,13 @@ export const FETCH_JOB_REQUESTS = 'FETCH_JOB_REQUESTS';
 export const FETCH_JOB_REQUEST = 'FETCH_JOB_REQUEST';
 
 
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 const API_KEY = '?key=abdef';
 
 const WEATHER_API_KEY = 'c2f8bf1f271b8ff9423f89b3a9c35bbf';
-const WEATHER_ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}`;
+const WEATHER_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}`;
 
-const SERVER_ROOT_URL = 'http://localhost:3090';
+const SERVER_ROOT_URL = 'https://localhost:3090';
 
 const WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
 
@@ -48,7 +48,7 @@ export function fetchPosts(){
 
 export function fetchBadges(){
     
-    const request = axios.get(`http://api-test.wonolo.com/api_v2/badges?token=${WONOLO_TOKEN}`);
+    const request = axios.get(`https://api-test.wonolo.com/api_v2/badges?token=${WONOLO_TOKEN}`);
     return{
         type: FETCH_BADGES,
         payload: request
@@ -64,7 +64,7 @@ export function fetchBadges(){
 // }
 
 export function fetchJobRequests(){
-    const request = axios.get(`http://api-test.wonolo.com/api_v2/job_requests?token=${WONOLO_TOKEN}`);
+    const request = axios.get(`https://api-test.wonolo.com/api_v2/job_requests?token=${WONOLO_TOKEN}`);
     
     return{
         type: FETCH_JOB_REQUESTS,
@@ -73,7 +73,7 @@ export function fetchJobRequests(){
 }
 
 export function fetchJobRequest(id){
-    const request = axios.get(`http://api-test.wonolo.com/api_v2/job_requests/${id}?token=${WONOLO_TOKEN}`);
+    const request = axios.get(`https://api-test.wonolo.com/api_v2/job_requests/${id}?token=${WONOLO_TOKEN}`);
 
     return{
         type: FETCH_JOB_REQUEST,
