@@ -165,7 +165,7 @@ export function signupUser({email, password }){
 }
 
 export function getWonoloToken(){
-    return axios.post('http://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_')
+    return axios.post('https://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_')
             .then(response => {
                 sessionStorage.setItem('wonolo_token', response.data.token);
             })

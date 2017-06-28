@@ -28560,7 +28560,7 @@
 	}
 
 	function getWonoloToken() {
-	    return _axios2.default.post('http://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_').then(function (response) {
+	    return _axios2.default.post('https://api-test.wonolo.com/api_v2/authenticate?api_key=pk_live_b8mNi79FrCCJYSkZ5rpU&secret_key=sk_live_9a1Zu5s-_7ZyBc2RbzU_').then(function (response) {
 	        sessionStorage.setItem('wonolo_token', response.data.token);
 	    }).catch(function (message) {
 	        debugger;
