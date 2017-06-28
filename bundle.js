@@ -28421,13 +28421,13 @@
 	var FETCH_JOB_REQUESTS = exports.FETCH_JOB_REQUESTS = 'FETCH_JOB_REQUESTS';
 	var FETCH_JOB_REQUEST = exports.FETCH_JOB_REQUEST = 'FETCH_JOB_REQUEST';
 
-	var ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+	var ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 	var API_KEY = '?key=abdef';
 
 	var WEATHER_API_KEY = 'c2f8bf1f271b8ff9423f89b3a9c35bbf';
-	var WEATHER_ROOT_URL = 'http://api.openweathermap.org/data/2.5/forecast?appid=' + WEATHER_API_KEY;
+	var WEATHER_ROOT_URL = 'https://api.openweathermap.org/data/2.5/forecast?appid=' + WEATHER_API_KEY;
 
-	var SERVER_ROOT_URL = 'http://localhost:3090';
+	var SERVER_ROOT_URL = 'https://localhost:3090';
 
 	var WONOLO_TOKEN = 'YeCB3iU9ZxVYbKqJxB4z';
 
@@ -28442,7 +28442,7 @@
 
 	function fetchBadges() {
 
-	    var request = _axios2.default.get('http://api-test.wonolo.com/api_v2/badges?token=' + WONOLO_TOKEN);
+	    var request = _axios2.default.get('https://api-test.wonolo.com/api_v2/badges?token=' + WONOLO_TOKEN);
 	    return {
 	        type: FETCH_BADGES,
 	        payload: request
@@ -28458,7 +28458,7 @@
 	// }
 
 	function fetchJobRequests() {
-	    var request = _axios2.default.get('http://api-test.wonolo.com/api_v2/job_requests?token=' + WONOLO_TOKEN);
+	    var request = _axios2.default.get('https://api-test.wonolo.com/api_v2/job_requests?token=' + WONOLO_TOKEN);
 
 	    return {
 	        type: FETCH_JOB_REQUESTS,
@@ -28467,7 +28467,7 @@
 	}
 
 	function fetchJobRequest(id) {
-	    var request = _axios2.default.get('http://api-test.wonolo.com/api_v2/job_requests/' + id + '?token=' + WONOLO_TOKEN);
+	    var request = _axios2.default.get('https://api-test.wonolo.com/api_v2/job_requests/' + id + '?token=' + WONOLO_TOKEN);
 
 	    return {
 	        type: FETCH_JOB_REQUEST,
